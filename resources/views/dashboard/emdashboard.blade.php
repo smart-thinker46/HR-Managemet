@@ -1,22 +1,25 @@
 @extends('layouts.master')
 @section('content')
-    <?php  
-        $hour   = date ("G");
-        $minute = date ("i");
-        $second = date ("s");
-        $msg = " Today is " . date ("l, M. d, Y.");
+    <?php
+    // Set timezone to Nairobi, Kenya
+    date_default_timezone_set('Africa/Nairobi');
 
-        if ($hour == 00 && $hour <= 9 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Morning,";
-        } else if ($hour >= 10 && $hour <= 11 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Day,";
-        } else if ($hour >= 12 && $hour <= 15 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Afternoon,";
-        } else if ($hour >= 16 && $hour <= 23 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Evening,";
-        } else {
-            $greet = "Welcome,";
-        }
+    $hour = date("G");
+    $msg = "Today is " . date("l, M. d, Y.");
+
+    if ($hour >= 0 && $hour <= 9) {
+        $greet = "Good Morning,";
+    } else if ($hour >= 10 && $hour <= 11) {
+        $greet = "Good Morning,";
+    } else if ($hour >= 12 && $hour <= 15) {
+        $greet = "Good Afternoon,";
+    } else if ($hour >= 16 && $hour <= 23) {
+        $greet = "Good Evening,";
+    } else {
+        $greet = "Hello!";
+    }
+
+    echo $greet . " " . $msg;
     ?>
     <!-- Page Wrapper -->
     <div class="page-wrapper">
@@ -35,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-8 col-md-8">
                     <section class="dash-section">
@@ -243,5 +246,5 @@
         </div>
         <!-- /Page Content -->
     </div>
-    <!-- /Page Wrapper -->  
+    <!-- /Page Wrapper -->
 @endsection

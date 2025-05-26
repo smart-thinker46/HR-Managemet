@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-              
+
             <!-- /Page Header -->
             <div class="card mb-0">
                 <div class="card-body">
@@ -118,7 +118,7 @@
                                                             </a>
                                                         </div>
                                                     </li>
-                                                @endif    
+                                                @endif
                                             </ul>
                                         </div>
                                     </div>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </div>
-					
+
             <div class="card tab-box">
                 <div class="row user-tabs">
                     <div class="col-lg-12 col-md-12 col-sm-12 line-tabs">
@@ -141,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="tab-content">
                 <div id="emp_profile" class="pro-overview tab-pane fade show active">
                     <div class="row">
@@ -152,7 +152,7 @@
                                     <h3 class="card-title">Personal Informations <a href="#" class="edit-icon" data-toggle="modal" data-target="#personal_info_modal"><i class="fa fa-pencil"></i></a></h3>
                                     <ul class="personal-info">
                                         <li>
-                                            <div class="title">Passport No.</div>
+                                            <div class="title">Full Name.</div>
                                             @if (!empty($userInformation->passport_no))
                                                 <div class="text">{{ $userInformation->passport_no }}</div>
                                             @else
@@ -160,9 +160,9 @@
                                             @endif
                                         </li>
                                         <li>
-                                            <div class="title">Passport Exp Date.</div>
-                                            @if (!empty($userInformation->passport_expiry_date))
-                                                <div class="text">{{ $userInformation->passport_expiry_date }}</div>
+                                            <div class="title">Employee ID</div>
+                                            @if (!empty($userInformation->tel))
+                                                <div class="text">{{ $userInformation->tel }}</div>
                                             @else
                                                 <div class="text">N/A</div>
                                             @endif
@@ -199,28 +199,13 @@
                                                 <div class="text">N/A</div>
                                             @endif
                                         </li>
-                                        <li>
-                                            <div class="title">Employment of spouse</div>
-                                            @if (!empty($userInformation->employment_of_spouse))
-                                                <div class="text">{{ $userInformation->employment_of_spouse }}</div>
-                                            @else
-                                                <div class="text">N/A</div>
-                                            @endif
-                                        </li>
-                                        <li>
-                                            <div class="title">No. of children</div>
-                                            @if (!empty($userInformation->children))
-                                                <div class="text">{{ $userInformation->children }}</div>
-                                            @else
-                                                <div class="text">N/A</div>
-                                            @endif
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <!-- End Personal Informations -->
-                        
+
                         <!-- Emergency Contact -->
                         <div class="col-md-6 d-flex">
                             <div class="card profile-box flex-fill">
@@ -306,7 +291,7 @@
                                             <div class="title">Bank name</div>
                                             @if(!empty($bankInformation->bank_name))
                                                 <div class="text">{{ $bankInformation->bank_name }}</div>
-                                            @else  
+                                            @else
                                                 <div class="text">N/A</div>
                                             @endif
                                         </li>
@@ -314,7 +299,7 @@
                                             <div class="title">Bank account No.</div>
                                             @if(!empty($bankInformation->bank_account_no))
                                                 <div class="text">{{ $bankInformation->bank_account_no }}</div>
-                                            @else  
+                                            @else
                                                 <div class="text">N/A</div>
                                             @endif
                                         </li>
@@ -322,7 +307,7 @@
                                             <div class="title">IFSC Code</div>
                                             @if(!empty($bankInformation->ifsc_code))
                                                 <div class="text">{{ $bankInformation->ifsc_code }}</div>
-                                            @else  
+                                            @else
                                                 <div class="text">N/A</div>
                                             @endif
                                         </li>
@@ -330,7 +315,7 @@
                                             <div class="title">PAN No</div>
                                             @if(!empty($bankInformation->pan_no))
                                                 <div class="text">{{ $bankInformation->pan_no }}</div>
-                                            @else  
+                                            @else
                                                 <div class="text">N/A</div>
                                             @endif
                                         </li>
@@ -462,7 +447,7 @@
                     </div>
                 </div>
                 <!-- /Profile Info Tab -->
-                    
+
                 <!-- Projects Tab -->
                 <div class="tab-pane fade" id="emp_projects">
                     <div class="row">
@@ -528,7 +513,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
@@ -591,7 +576,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
@@ -654,7 +639,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
@@ -720,7 +705,7 @@
                     </div>
                 </div>
                 <!-- /Projects Tab -->
-                
+
                 <!-- Bank Statutory Tab -->
                 <div class="tab-pane fade" id="bank_statutory">
                     <div class="card">
@@ -861,7 +846,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <hr>
                                 <h3 class="card-title"> ESI Information</h3>
                                 <div class="row">
@@ -923,7 +908,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="submit-section">
                                     <button class="btn btn-primary submit-btn" type="submit">Save</button>
                                 </div>
@@ -1162,7 +1147,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Designation <span class="text-danger">*</span></label>
-                                        
+
                                         <select class="select" id="" name="designation">
                                             <option selected disabled>Select Designation</option>
                                             <option value="Web Designer">Web Designer</option>
@@ -1214,7 +1199,7 @@
                                         <label>Bank name</label>
                                         @if(!empty($bankInformation->bank_name))
                                             <input type="text" class="form-control @error('bank_name') is-invalid @enderror" name="bank_name" value="{{ $bankInformation->bank_name }}">
-                                        @else 
+                                        @else
                                             <input type="text" class="form-control @error('bank_name') is-invalid @enderror" name="bank_name" value="{{ old('bank_name') }}">
                                         @endif
                                     </div>
@@ -1224,7 +1209,7 @@
                                         <label>Bank account No</label>
                                         @if(!empty($bankInformation->bank_account_no))
                                             <input type="text" class="form-control @error('bank_account_no') is-invalid @enderror" name="bank_account_no" value="{{ $bankInformation->bank_account_no }}">
-                                        @else 
+                                        @else
                                             <input type="text" class="form-control @error('bank_account_no') is-invalid @enderror" name="bank_account_no" oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" value="{{ old('bank_account_no') }}">
                                         @endif
                                     </div>
@@ -1234,7 +1219,7 @@
                                         <label>IFSC Code</label>
                                         @if(!empty($bankInformation->ifsc_code))
                                             <input type="text" class="form-control @error('ifsc_code') is-invalid @enderror" name="ifsc_code" value="{{ $bankInformation->ifsc_code }}">
-                                        @else 
+                                        @else
                                             <input type="text" class="form-control @error('pan_no') is-invalid @enderror" name="ifsc_code" value="{{ old('ifsc_code') }}">
                                         @endif
                                     </div>
@@ -1244,7 +1229,7 @@
                                         <label>PAN No</label>
                                         @if(!empty($bankInformation->pan_no))
                                             <input type="text" class="form-control @error('pan_no') is-invalid @enderror" name="pan_no" value="{{ $bankInformation->pan_no }}">
-                                        @else 
+                                        @else
                                             <input type="text" class="form-control @error('pan_no') is-invalid @enderror" name="pan_no" value="{{ old('pan_no') }}">
                                         @endif
                                     </div>
@@ -1259,7 +1244,7 @@
             </div>
         </div>
         <!-- /Bank information Modal -->
-    
+
         @if (!empty($userInformation))
         <!-- Personal Info Modal -->
         <div id="personal_info_modal" class="modal custom-modal fade" role="dialog">
@@ -1278,16 +1263,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Passport No</label>
+                                        <label>Full Name</label>
                                         <input type="text" class="form-control @error('passport_no') is-invalid @enderror" name="passport_no" value="{{ $userInformation->passport_no }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Passport Expiry Date</label>
-                                        <div class="cal-icon">
-                                            <input class="form-control datetimepicker @error('passport_expiry_date') is-invalid @enderror" type="text" name="passport_expiry_date" value="{{ $userInformation->passport_expiry_date }}">
-                                        </div>
+                                        <label>Employee ID</label>
+                                        <input class="form-control @error('tel') is-invalid @enderror" type="text" name="tel" value="{{ $userInformation->tel }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -1424,7 +1407,7 @@
         </div>
         <!-- /Personal Info Modal -->
         @endif
-        
+
         <!-- Family Info Modal -->
         <div id="family_info_modal" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1469,7 +1452,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i class="fa fa-trash-o"></i></a></h3>
@@ -1514,7 +1497,7 @@
             </div>
         </div>
         <!-- /Family Info Modal -->
-        
+
         <!-- Emergency Contact Modal -->
         <div id="emergency_contact_modal" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1577,7 +1560,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="card">
                                 <div class="card-body">
                                     <h3 class="card-title">Secondary Contact</h3>
@@ -1634,7 +1617,7 @@
             </div>
         </div>
         <!-- /Emergency Contact Modal -->
-        
+
         <!-- Education Modal -->
         <div id="education_info" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1695,7 +1678,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i class="fa fa-trash-o"></i></a></h3>
@@ -1756,7 +1739,7 @@
             </div>
         </div>
         <!-- /Education Modal -->
-        
+
         <!-- Experience Modal -->
         <div id="experience_info" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1811,7 +1794,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title">Experience Informations <a href="javascript:void(0);" class="delete-icon"><i class="fa fa-trash-o"></i></a></h3>
@@ -1872,61 +1855,61 @@
     @section('script')
         <!-- Personal Info -->
         <script>
-            $('#personalInfo').validate({  
-                rules: {  
-                    passport_no: 'required',  
-                    passport_expiry_date: 'required',  
-                    tel: 'required',  
-                    nationality: 'required',  
-                    religion: 'required',  
-                    marital_status: 'required',  
-                    employment_of_spouse: 'required',  
-                    children: 'required',  
-                },  
+            $('#personalInfo').validate({
+                rules: {
+                    passport_no: 'required',
+                    passport_expiry_date: 'required',
+                    tel: 'required',
+                    nationality: 'required',
+                    religion: 'required',
+                    marital_status: 'required',
+                    employment_of_spouse: 'required',
+                    children: 'required',
+                },
                 messages: {
-                    passport_no: 'Please Input Passport No',    
-                    passport_expiry_date: 'Please Input Passport Expiry Date',    
-                    tel: 'Please Input Phone Number',     
-                    nationality: 'Please Input Nationality',    
-                    religion: 'Please Input Religion',    
-                    marital_status: 'Please Input Marital status',    
-                    employment_of_spouse: 'Please Input Employment of spouse',    
-                    children: 'Please Input No. of children',    
-                },  
-                submitHandler: function(form) {  
+                    passport_no: 'Please Input Passport No',
+                    passport_expiry_date: 'Please Input Passport Expiry Date',
+                    tel: 'Please Input Phone Number',
+                    nationality: 'Please Input Nationality',
+                    religion: 'Please Input Religion',
+                    marital_status: 'Please Input Marital status',
+                    employment_of_spouse: 'Please Input Employment of spouse',
+                    children: 'Please Input No. of children',
+                },
+                submitHandler: function(form) {
                     form.submit();
-                }  
-            });  
+                }
+            });
         </script>
 
         <!-- Emergency Contact -->
         <script>
-            $('#validation').validate({  
-                rules: {  
-                    name_primary: 'required',  
-                    relationship_primary: 'required',  
-                    phone_primary: 'required',  
-                    phone_2_primary: 'required',  
-                    name_secondary: 'required',  
-                    relationship_secondary: 'required',  
-                    phone_secondary: 'required',  
-                    phone_2_secondary: 'required',  
-                },  
+            $('#validation').validate({
+                rules: {
+                    name_primary: 'required',
+                    relationship_primary: 'required',
+                    phone_primary: 'required',
+                    phone_2_primary: 'required',
+                    name_secondary: 'required',
+                    relationship_secondary: 'required',
+                    phone_secondary: 'required',
+                    phone_2_secondary: 'required',
+                },
                 messages: {
-                    name_primary: 'Please input name primary',  
-                    relationship_primary: 'Please input relationship primary',  
-                    phone_primary: 'Please input phone primary',  
-                    phone_2_primary: 'Please input phone 2 primary',  
-                    name_secondary: 'Please input name secondary',  
-                    relationship_secondary: 'Please input relationship secondary',  
-                    phone_secondaryr: 'Please input phone secondary',  
-                    phone_2_secondary: 'Please input phone 2 secondary',  
-                },  
-                submitHandler: function(form) {  
+                    name_primary: 'Please input name primary',
+                    relationship_primary: 'Please input relationship primary',
+                    phone_primary: 'Please input phone primary',
+                    phone_2_primary: 'Please input phone 2 primary',
+                    name_secondary: 'Please input name secondary',
+                    relationship_secondary: 'Please input relationship secondary',
+                    phone_secondaryr: 'Please input phone secondary',
+                    phone_2_secondary: 'Please input phone 2 secondary',
+                },
+                submitHandler: function(form) {
                     form.submit();
-                }  
-            });  
+                }
+            });
         </script>
-        
+
     @endsection
 @endsection
