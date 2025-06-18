@@ -6,14 +6,14 @@
             <div class="container">
                 <!-- Account Logo -->
                 <div class="account-logo">
-                    <a href="index.html"><img src="{{ URL::to('assets/img/logo2.png') }}" alt="SoengSouy"></a>
+                    <a href="index.html"><img src="{{ URL::to('assets/img/logo4.png') }}" alt=""></a>
                 </div>
                 <!-- /Account Logo -->
                 <div class="account-box">
                     <div class="account-wrapper">
-                        <h3 class="account-title">Register</h3>
-                        <p class="account-subtitle">Access to our dashboard</p>
-                        
+                        <h2 class="account-title">Account Registration</h2>
+                        <p class="account-subtitle">Fill the Form to Access our dashboard</p>
+
                         <!-- Account Form -->
                         <form method="POST" action="{{ route('register') }}">
                             @csrf

@@ -11,7 +11,7 @@
                 <!-- /Account Logo -->
                 <div class="account-box">
                     <div class="account-wrapper">
-                        <h3 class="account-title">Login</h3>
+                        <h2 class="account-title">Hi, Welcome Back</h2>
                         <p class="account-subtitle">Access to our dashboard</p>
                         <!-- Account Form -->
                         <form method="POST" action="{{ route('login') }}">

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Bar Chart
-	
+
 	Morris.Bar({
 		element: 'bar-charts',
 		data: [
@@ -18,13 +18,13 @@ $(document).ready(function() {
 		labels: ['Total Income', 'Total Outcome'],
 		lineColors: ['#f43b48','#453a94'],
 		lineWidth: '3px',
-		barColors: ['#f43b48','#453a94'],
+		barColors: ['blue','maroon'],
 		resize: true,
 		redraw: true
 	});
-	
+
 	// Line Chart
-	
+
 	Morris.Line({
 		element: 'line-charts',
 		data: [
@@ -39,10 +39,10 @@ $(document).ready(function() {
 		xkey: 'y',
 		ykeys: ['a', 'b'],
 		labels: ['Total Sales', 'Total Revenue'],
-		lineColors: ['#f43b48','#453a94'],
+		lineColors: ['blue','#F2BB0B'],
 		lineWidth: '3px',
 		resize: true,
 		redraw: true
 	});
-		
+
 });
